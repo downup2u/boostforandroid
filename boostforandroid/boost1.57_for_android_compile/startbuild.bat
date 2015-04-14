@@ -1,7 +1,7 @@
-set ANDROID_SDK=D:\AndroidDev\SDK
-set ANDROID_NDK=D:\AndroidDev\android-ndk-r10c
+set ANDROID_SDK=F:\Android\android_dev\SDK
+set ANDROID_NDK=F:\Android\android_dev\android-ndk-r10c
 set ANDROID_NDK_TOOLCHAIN_VERSION=4.9
-set BOOST_CONFIGURATION="-a --with-locale --with-log --with-thread --with-serialization  --with-date_time  --with-system   --with-chrono --with-filesystem --with-regex --layout=versioned toolset=gcc-android target-os=linux threading=multi link=static runtime-link=shared variant=release threadapi=pthread stage"
+set BOOST_CONFIGURATION="-a --with-random --with-thread --with-date_time  --with-system   --with-chrono --with-filesystem --with-regex --layout=versioned toolset=gcc-android target-os=linux threading=multi link=static runtime-link=shared variant=release threadapi=pthread stage"
 
 call build-android.bat android gcc armeabi %ANDROID_SDK% %ANDROID_NDK% %ANDROID_NDK_TOOLCHAIN_VERSION% %BOOST_CONFIGURATION%
 call build-android.bat android gcc armeabi-v7a %ANDROID_SDK% %ANDROID_NDK% %ANDROID_NDK_TOOLCHAIN_VERSION% %BOOST_CONFIGURATION%

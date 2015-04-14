@@ -25,9 +25,11 @@ $(NDK)/toolchains/x86_64-$(TOOLCHAIN_VERSION)/prebuilt/$(NDK_HOST)/bin/x86_64-li
 <compileflags>-Wa,--noexecstack
 <compileflags>-DANDROID
 <compileflags>-D__ANDROID__
+#<compileflags>-isystem$(NDK)/platforms/$(NDK_PLATFORM)/arch-x86_64/usr/include 21以上需要
 <compileflags>-isystem$(NDK)/platforms/$(NDK_PLATFORM)/arch-x86_64/usr/include
 <compileflags>-isystem$(NDK)/sources/cxx-stl/gnu-libstdc++/$(TOOLCHAIN_VERSION)/include
-<compileflags>-isystem$(NDK)/sources/cxx-stl/gnu-libstdc++/$(TOOLCHAIN_VERSION)/libs/x86_64/include
+#<compileflags>-isystem$(NDK)/sources/cxx-stl/gnu-libstdc++/$(TOOLCHAIN_VERSION)/libs/x86_64/include 21以上需要
+<compileflags>-isystem$(NDK)/sources/cxx-stl/gnu-libstdc++/$(TOOLCHAIN_VERSION)/libs/x86/include
 <linkflags>-no-canonical-prefixes
 # 'Release/x86_64' section
 <compileflags>-O2
